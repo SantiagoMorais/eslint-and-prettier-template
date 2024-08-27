@@ -47,9 +47,11 @@ Para projetos Next.js, as dependências básicas para integrar o ESLint e o Pret
 
 ## Utilizando o template
 
-Para utilizar este template é só utilizar o código abaixo nos seus novos projetos
+Para utilizar este template é só utilizar o código abaixo nos seus novos projetos.
 
 `cp -r /caminho/para/template-eslint-prettier/\* /caminho/para/novo-projeto/`
+
+E para baixar os pacotes você também pode acessar o **package.json** neste repositório e baixar as dependências de seu interesse. Verifique, antes de instalar, qual linguagem e framework você está utilizando, pois irá variar caso você esteja utilizando JavaScript ou Typescript e React-DOM ou NextJS.
 
 ## Configurações do VSCode
 
