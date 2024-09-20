@@ -38,17 +38,17 @@ Exemplo de como instalar todas as dependências para um projeto que utiliza Reac
 
 ### Node
 
-`npm install --save-dev eslint-plugin-prettier esling-config-prettier`
+`npm install --save-dev eslint-plugin-prettier eslint-config-prettier`
 
 ### React
 
-`npm install --save-dev eslint-plugin-prettier esling-config-prettier @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react eslint-plugin-react-hooks`
+`npm install --save-dev eslint-plugin-prettier eslint-config-prettier @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react eslint-plugin-react-hooks`
 
 ### NextJS
 
 Para projetos Next.js, as dependências básicas para integrar o ESLint e o Prettier são semelhantes, mas você deve adicionar a configuração específica para Next.js.
 
-`npm install --save-dev eslint-plugin-prettier esling-config-prettier @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react eslint-plugin-react-hooks eslint-config-next
+`npm install --save-dev eslint-plugin-prettier eslint-config-prettier @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react eslint-plugin-react-hooks eslint-config-next
 `
 
 Por fim, todos os projetos precisamos executar os comandos:
