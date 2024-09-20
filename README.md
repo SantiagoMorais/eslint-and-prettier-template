@@ -6,11 +6,11 @@ Eu criei este repositório para adicionar configurações de formatação e corr
 
 Instalar prettier e eslint globalmente:
 
-`npm install -g eslint prettier eslint-plugin-prettier esling-config-prettier` 
+`npm install -g eslint prettier` 
 
 Instalar prettier e eslint localmente como desenvolvedor:
 
-`npm install --save-dev eslint prettier eslint-plugin-prettier esling-config-prettier`
+`npm install --save-dev eslint prettier`
 
 ## Instalação Adicional
 
@@ -34,22 +34,26 @@ Instalar prettier e eslint localmente como desenvolvedor:
 
 ### Instalação:
 
-Para projetos que utilizem Node você não precisa intalar outras dependências, mas todos os projetos você precisa executar os comandos:
-- `echo {} > .prettierrc`: Este criará o arquivo .prettierrc para receber as configurações.
-- `npx eslint --init`: Este criará o arquivo eslint.json para receber as configurações. Caso você utilize Vite na sua aplicação React, um arquivo eslint no formato JavaScript.
-
 Exemplo de como instalar todas as dependências para um projeto que utiliza React com Typescript e outro com NextJS
+
+### Node
+
+`npm install --save-dev eslint-plugin-prettier esling-config-prettier`
 
 ### React
 
-`npm install --save-dev @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react eslint-plugin-react-hooks`
+`npm install --save-dev eslint-plugin-prettier esling-config-prettier @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react eslint-plugin-react-hooks`
 
 ### NextJS
 
 Para projetos Next.js, as dependências básicas para integrar o ESLint e o Prettier são semelhantes, mas você deve adicionar a configuração específica para Next.js.
 
-`npm install --save-dev @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react eslint-plugin-react-hooks eslint-config-next
+`npm install --save-dev eslint-plugin-prettier esling-config-prettier @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react eslint-plugin-react-hooks eslint-config-next
 `
+
+Por fim, todos os projetos precisamos executar os comandos:
+- `echo {} > .prettierrc`: Este criará o arquivo .prettierrc para receber as configurações.
+- `npx eslint --init`: Este criará o arquivo eslint.json para receber as configurações. Caso você utilize Vite na sua aplicação React, um arquivo eslint no formato JavaScript.
 
 ## Utilizando o template
 
