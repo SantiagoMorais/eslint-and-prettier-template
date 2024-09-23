@@ -55,6 +55,43 @@ Por fim, todos os projetos precisamos executar os comandos:
 - `echo {} > .prettierrc`: Este criará o arquivo .prettierrc para receber as configurações.
 - `npx eslint --init`: Este criará o arquivo eslint.json para receber as configurações. Caso você utilize Vite na sua aplicação React, um arquivo eslint no formato JavaScript.
 
+## Vite
+
+Após instalação dos pacotes é necessário configurar o plugin do prettier no `eslint.config.js`, adicionando o plugin prettier:
+
+```js
+    extends: [
+      js.configs.recommended,
+      ...tseslint.configs.recommended,
+      "plugin:prettier/recommended",
+      'plugin:react/recommended',
+      'plugin:react-hooks/recommended'
+    ],
+```
+
+## Explicação das bibliotecas
+
+- eslint-plugin-prettier:
+  - Integra o Prettier ao ESLint, permitindo que o ESLint exiba erros de formatação como avisos de lint.
+
+- eslint-config-prettier:
+  - Desativa regras conflitantes entre ESLint e Prettier, permitindo que o Prettier controle a formatação do código.
+
+- @typescript-eslint/parser:
+  - Parser que permite ao ESLint entender e analisar código TypeScript.
+
+- @typescript-eslint/eslint-plugin:
+  - Plugin que adiciona regras específicas para TypeScript ao ESLint, como verificações de tipos.
+
+- eslint-plugin-react:
+  - Fornece regras específicas para o desenvolvimento em React, garantindo boas práticas e padrões.
+
+- eslint-plugin-react-hooks:
+  - Plugin que aplica regras relacionadas aos hooks do React, garantindo que estejam sendo usados corretamente.
+ 
+- eslint-config-next:
+  - Configuração oficial do ESLint para projetos Next.js. Ele aplica regras específicas e otimizações recomendadas para o desenvolvimento com o framework Next.js.
+
 ## Utilizando o template
 
 Para utilizar este template é só utilizar o código abaixo nos seus novos projetos.
