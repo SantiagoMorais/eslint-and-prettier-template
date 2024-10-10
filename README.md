@@ -4,9 +4,9 @@ Eu criei este repositório para adicionar configurações de formatação e corr
 
 ## Instalação do Prettier e ESLint
 
-Instalar prettier e eslint globalmente:
+Caso você deseje, você pode instalar o prettier e o eslint globalmente:
 
-`npm install -g eslint prettier` 
+`npm install -g eslint prettier`
 
 Instalar prettier e eslint localmente como desenvolvedor:
 
@@ -16,29 +16,34 @@ Instalar prettier e eslint localmente como desenvolvedor:
 
 É necessário instalar algumas dependências adicionais. Elas ajudam a integrar o Prettier ao ESlint e configuram o ambiente de desenvolvimento para aplicar e manter a formatação e qualidade do código. Esta é a lista de pacotes comuns e como instalá-los:
 
-1. Dependências Básicas
-- ESLint: O linting de código.
-- Prettier: O formatador de código.
+1. **Dependências Básicas**  
+   - **ESLint**: O linting de código.  
+   - **Prettier**: O formatador de código.
 
-2. Dependências para Integração entre ESLint e Prettier
-- eslint-plugin-prettier: Faz com que o ESLint execute o Prettier como uma regra de linting.
-- eslint-config-prettier: Desativa regras do ESLint que podem entrar em conflito com o Prettier.
+2. **Dependências para Integração entre ESLint e Prettier**  
+   - **eslint-plugin-prettier**: Faz com que o ESLint execute o Prettier como uma regra de linting.  
+   - **eslint-config-prettier**: Desativa regras do ESLint que podem entrar em conflito com o Prettier.
 
-3. Dependências Adicionais para Projetos com React e TypeScript
-- Para React:
-  - eslint-plugin-react: Regras específicas para React.
-  - eslint-plugin-react-hooks: Regras para hooks do React.
+3. **Dependências Adicionais para Projetos com React e TypeScript**
+   - Para React:  
+     - **eslint-plugin-react**: Regras específicas para React.  
+     - **eslint-plugin-react-hooks**: Regras para hooks do React.
+   - Para TypeScript:  
+     - **@typescript-eslint/parser**: Permite que o ESLint analise código TypeScript.
 
-- Para TypeScript:
-  - @typescript-eslint/parser: Permite que o ESLint analise código TypeScript.
+### Instalação
 
-### Instalação:
-
-Exemplo de como instalar todas as dependências para um projeto que utiliza React com Typescript e outro com NextJS
+Exemplo de como instalar todas as dependências para um projeto que utiliza React com Typescript e outro com NextJS.
 
 ### Node
 
-`npm install --save-dev eslint-plugin-prettier eslint-config-prettier`
+Usando JavaScript:
+
+`npm install --save-dev eslint-plugin-prettier eslint-config-prettier globals @eslint/js`
+
+Usando TypeScript:
+
+`npm install eslint-plugin-prettier eslint-config-prettier @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev`
 
 ### React
 
@@ -48,63 +53,62 @@ Exemplo de como instalar todas as dependências para um projeto que utiliza Reac
 
 Para projetos Next.js, as dependências básicas para integrar o ESLint e o Prettier são semelhantes, mas você deve adicionar a configuração específica para Next.js.
 
-`npm install --save-dev eslint-plugin-prettier eslint-config-prettier @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react eslint-plugin-react-hooks eslint-config-next
-`
+`npm install --save-dev eslint-plugin-prettier eslint-config-prettier @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react eslint-plugin-react-hooks eslint-config-next`
 
-Por fim, todos os projetos precisamos executar os comandos:
-- `echo {} > .prettierrc`: Este criará o arquivo .prettierrc para receber as configurações.
-- `npx eslint --init`: Este criará o arquivo eslint.json para receber as configurações. Caso você utilize Vite na sua aplicação React, um arquivo eslint no formato JavaScript.
+Por fim, todos os projetos precisam executar os comandos:
+- `echo {} > .prettierrc`: Este criará o arquivo `.prettierrc` para receber as configurações.
+- `npx eslint --init`: Este criará o arquivo `eslint.json` para receber as configurações. Caso você utilize Vite na sua aplicação React, um arquivo eslint no formato JavaScript será gerado.
 
 ## Vite
 
-Após instalação dos pacotes é necessário configurar o plugin do prettier no `eslint.config.js`, adicionando o plugin prettier:
+Após a instalação dos pacotes, é necessário configurar o plugin do Prettier no `eslint.config.js`, adicionando o plugin Prettier:
 
 ```js
-    extends: [
-      js.configs.recommended,
-      ...tseslint.configs.recommended,
-      "plugin:prettier/recommended",
-      'plugin:react/recommended',
-      'plugin:react-hooks/recommended'
-    ],
+extends: [
+  "eslint:recommended", // Recomendado para JS
+  "plugin:@typescript-eslint/recommended", // Regras para TS
+  "plugin:prettier/recommended", // Regras do Prettier
+  "plugin:react/recommended", // Regras React
+  "plugin:react-hooks/recommended", // Regras React Hooks
+],
 ```
 
 ## Explicação das bibliotecas
 
-- eslint-plugin-prettier:
+- **eslint-plugin-prettier**:
   - Integra o Prettier ao ESLint, permitindo que o ESLint exiba erros de formatação como avisos de lint.
 
-- eslint-config-prettier:
+- **eslint-config-prettier**:
   - Desativa regras conflitantes entre ESLint e Prettier, permitindo que o Prettier controle a formatação do código.
 
-- @typescript-eslint/parser:
+- **@typescript-eslint/parser**:
   - Parser que permite ao ESLint entender e analisar código TypeScript.
 
-- @typescript-eslint/eslint-plugin:
+- **@typescript-eslint/eslint-plugin**:
   - Plugin que adiciona regras específicas para TypeScript ao ESLint, como verificações de tipos.
 
-- eslint-plugin-react:
+- **eslint-plugin-react**:
   - Fornece regras específicas para o desenvolvimento em React, garantindo boas práticas e padrões.
 
-- eslint-plugin-react-hooks:
+- **eslint-plugin-react-hooks**:
   - Plugin que aplica regras relacionadas aos hooks do React, garantindo que estejam sendo usados corretamente.
- 
-- eslint-config-next:
+
+- **eslint-config-next**:
   - Configuração oficial do ESLint para projetos Next.js. Ele aplica regras específicas e otimizações recomendadas para o desenvolvimento com o framework Next.js.
 
 ## Utilizando o template
 
-Para utilizar este template é só utilizar o código abaixo nos seus novos projetos.
+Para utilizar este template, basta utilizar o código abaixo nos seus novos projetos.
 
 `cp -r /caminho/para/template-eslint-prettier/\* /caminho/para/novo-projeto/`
 
-E para baixar os pacotes você também pode acessar o **package.json** neste repositório e baixar as dependências de seu interesse. Verifique, antes de instalar, qual linguagem e framework você está utilizando, pois irá variar caso você esteja utilizando JavaScript ou Typescript e React-DOM ou NextJS.
+E para baixar os pacotes, você também pode acessar o **package.json** neste repositório e baixar as dependências de seu interesse. Verifique, antes de instalar, qual linguagem e framework você está utilizando, pois irá variar caso você esteja utilizando JavaScript ou Typescript e React-DOM ou NextJS.
 
 ## Configurações do VSCode
 
 Certifique-se também que as configurações globais estejam no **settings.json** do VSCode.
 
-Para visualizar as configurações do VSCode é só utilizar o atalho "Ctrl + p", escreva ">" e em seguida:
+Para visualizar as configurações do VSCode, utilize o atalho "Ctrl + p", escreva ">" e em seguida:
 
 > Preferences: Open User Settings (JSON)
 
