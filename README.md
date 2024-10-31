@@ -99,7 +99,6 @@ A configuração do `prettier` pode acontecer tanto utilizando o arquivo `.prett
     },
 ```
 
-
 ## Vite
 
 Após a instalação dos pacotes, é necessário configurar o plugin do Prettier no `eslint.config.js`, adicionando o plugin Prettier:

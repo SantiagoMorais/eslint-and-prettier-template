@@ -8,6 +8,7 @@ import tsParser from "@typescript-eslint/parser"; // Parser TypeScript
 export default [
   // Configurações para TypeScript
   {
+    extends: [prettierPlugin],
     files: ["*.ts", "*.tsx"], // Aplica às extensões de TypeScript
     languageOptions: {
       parser: tsParser, // Parser para TypeScript
@@ -20,7 +21,6 @@ export default [
     },
     plugins: {
       "@typescript-eslint": typescriptPlugin, // Plugin para linting de TypeScript
-      prettier: prettierPlugin, // Plugin do Prettier para formatação
     },
     rules: {
       "@typescript-eslint/no-unused-vars": "warn", // Aviso para variáveis não usadas em TypeScript
