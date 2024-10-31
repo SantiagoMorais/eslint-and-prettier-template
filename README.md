@@ -37,19 +37,19 @@ Exemplo de como instalar todas as dependências para um projeto que utiliza Reac
 
 ### Node
 
-Usando JavaScript:
+**Usando JavaScript:**
 
 `npm install --save-dev eslint-plugin-prettier eslint-config-prettier globals @eslint/js`
 
-Usando TypeScript:
+**Usando TypeScript:**
 
 `npm install eslint-plugin-prettier eslint-config-prettier @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev`
 
-### React
+### React com Typescript
 
 `npm install --save-dev eslint-plugin-prettier eslint-config-prettier @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react eslint-plugin-react-hooks`
 
-### NextJS
+### NextJS com Typescript
 
 Para projetos Next.js, as dependências básicas para integrar o ESLint e o Prettier são semelhantes, mas você deve adicionar a configuração específica para Next.js.
 
@@ -58,6 +58,20 @@ Para projetos Next.js, as dependências básicas para integrar o ESLint e o Pret
 Por fim, todos os projetos precisam executar os comandos:
 - `echo {} > .prettierrc`: Este criará o arquivo `.prettierrc` para receber as configurações.
 - `npx eslint --init`: Este criará o arquivo `eslint.json` para receber as configurações. Caso você utilize Vite na sua aplicação React, um arquivo eslint no formato JavaScript será gerado.
+
+A configuração do `prettier` pode acontecer tanto utilizando o arquivo `.prettierrc` como um arquivo JSON ou configurá-lo diretamente no `eslint.config.mjs` assim:
+
+```ts
+    rules: {
+      "prettier/prettier": ["error", {
+        singleQuote: false,
+        semi: true,
+        trailingComma: "es5",
+        endOfLine: "lf",
+        tabWidth: 2
+      }], // Aplica as regras do Prettier
+    },
+```
 
 ## Vite
 

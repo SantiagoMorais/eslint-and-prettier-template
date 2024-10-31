@@ -25,7 +25,13 @@ export default [
     rules: {
       "@typescript-eslint/no-unused-vars": "warn", // Aviso para variáveis não usadas em TypeScript
       "no-console": ["warn", { allow: ["warn", "error"] }], // Permite apenas console.warn e console.error
-      "prettier/prettier": "error", // Aplica as regras do Prettier
+      "prettier/prettier": ["error", {
+        singleQuote: false,
+        semi: true,
+        trailingComma: "es5",
+        endOfLine: "lf",
+        tabWidth: 2
+      }], // Aplica as regras do Prettier
     },
   },
 
@@ -44,7 +50,13 @@ export default [
     rules: {
       "no-unused-vars": "warn", // Aviso para variáveis não usadas em JavaScript
       "no-console": ["warn", { allow: ["warn", "error"] }], // Permite apenas console.warn e console.error
-      "prettier/prettier": "error", // Aplica as regras do Prettier
+      "prettier/prettier": ["error", {
+        singleQuote: false,
+        semi: true,
+        trailingComma: "es5",
+        endOfLine: "lf",
+        tabWidth: 2
+      }], // Aplica as regras do Prettier
     },
   },
   */
