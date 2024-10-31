@@ -56,7 +56,7 @@ Para projetos Next.js, as dependências básicas para integrar o ESLint e o Pret
 `npm install --save-dev eslint-plugin-prettier eslint-config-prettier @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react eslint-plugin-react-hooks eslint-config-next`
 
 Por fim, todos os projetos precisam executar os comandos:
-- `echo {} > .prettierrc`: Este criará o arquivo `.prettierrc` para receber as configurações.
+- `echo {} > .prettierrc`: Este criará o arquivo `.prettierrc` para receber as configurações ou você pode configurar o prettier diretamente no arquivo de configuração do eslint, como demonstrado abaixo.
 - `npx eslint --init`: Este criará o arquivo `eslint.json` para receber as configurações. Caso você utilize Vite na sua aplicação React, um arquivo eslint no formato JavaScript será gerado.
 
 A configuração do `prettier` pode acontecer tanto utilizando o arquivo `.prettierrc` como um arquivo JSON ou configurá-lo diretamente no `eslint.config.mjs` assim:
@@ -72,6 +72,7 @@ A configuração do `prettier` pode acontecer tanto utilizando o arquivo `.prett
       }], // Aplica as regras do Prettier
     },
 ```
+
 
 ## Vite
 
@@ -171,6 +172,22 @@ Se sua configuração do VS Code tiver formatadores padrão diferentes para vár
 ```
 
 Se necessário, ajuste ou remova essas configurações específicas para garantir que a responsabilidade da formatação fique exclusivamente com o Prettier.
+
+## Bônus: Configurando o Prettier ao TailwindCSS
+
+É possível configurar o prettier ao Tailwind, para que o prettier organize as classes utilitárias, como adicionando estilizações de hover e responsividade no final, tamanhos e medidas no início, etc. Dessa forma o código fica mais legível e organizado. Além disso, auxilia para que não tenhamos que nos preocupar com essa formatação, deixando ela por conta to Prettier.
+
+Para configurá-la, é necessário que o plugin do Prettier já esteja instalado como mostrado no início dessa documentação. Em seguinta precisamos instalar o plugin:
+
+`npm i prettier-plugin-tailwindcss -D`
+
+Por fim, adicionar essa linha ao seu arquivo `.prettierrcc`: 
+```json
+{
+    "plugins": ["prettier-plugin-tailwindcss"]
+}
+```
+Este arquivo está neste repositório e lá é mostrado como ele deve ser configurado.
 
 ## Responsabilidades
 
