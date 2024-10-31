@@ -2,6 +2,32 @@
 
 Eu criei este repositório para adicionar configurações de formatação e correção de erros no código através do Prettier e ESLint. Como são muitas configurações e pacotes a serem baixados, eu criei este repositório explicando como utilizá-lo e também adicionei aqui os arquivos de configuração do Prettier e ESLint com as minhas preferências. Utilize, caso queira.
 
+![prettier e eslint](assets/prettier-and-eslint.png)
+
+# Sumário
+
+- [Instalação do Prettier e ESLint](#instalação-do-prettier-e-eslint)
+- [Instalação Adicional](#instalação-adicional)
+  - [Dependências Básicas](#dependências-básicas)
+  - [Dependências para Integração entre ESLint e Prettier](#dependências-para-integração-entre-eslint-e-prettier)
+  - [Dependências Adicionais para Projetos com React e TypeScript](#dependências-adicionais-para-projetos-com-react-e-typescript)
+- [Instalação](#instalação)
+  - [Node](#node)
+  - [React com TypeScript](#react-com-typescript)
+  - [NextJS com TypeScript](#nextjs-com-typescript)
+- [Vite](#vite)
+- [Explicação das Bibliotecas](#explicação-das-bibliotecas)
+- [Utilizando o Template](#utilizando-o-template)
+- [Configurações do VSCode](#configurações-do-vscode)
+- [Configurações Específicas para Linguagens](#configurações-específicas-para-linguagens)
+- [Bônus: Configurando o Prettier ao TailwindCSS](#bônus-configurando-o-prettier-ao-tailwindcss)
+- [Responsabilidades](#responsabilidades)
+  - [Prettier](#prettier)
+  - [ESLint](#eslint)
+- [Resumo](#resumo)
+- [Autor](#autor)
+
+
 ## Instalação do Prettier e ESLint
 
 Caso você deseje, você pode instalar o prettier e o eslint globalmente:
@@ -174,6 +200,8 @@ Se sua configuração do VS Code tiver formatadores padrão diferentes para vár
 Se necessário, ajuste ou remova essas configurações específicas para garantir que a responsabilidade da formatação fique exclusivamente com o Prettier.
 
 ## Bônus: Configurando o Prettier ao TailwindCSS
+
+![prettier plugin tailwindcss](assets/prettier-plugin-tailwindcss.webp)
 
 É possível configurar o prettier ao Tailwind, para que o prettier organize as classes utilitárias, como adicionando estilizações de hover e responsividade no final, tamanhos e medidas no início, etc. Dessa forma o código fica mais legível e organizado. Além disso, auxilia para que não tenhamos que nos preocupar com essa formatação, deixando ela por conta to Prettier.
 
