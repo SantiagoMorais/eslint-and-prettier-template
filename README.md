@@ -69,7 +69,7 @@ Exemplo de como instalar todas as dependências para um projeto que utiliza Reac
 
 **Usando TypeScript:**
 
-`npm install eslint-plugin-prettier eslint-config-prettier @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev`
+`npm install eslint-plugin-prettier eslint-config-prettier @typescript-eslint/parser @typescript-eslint/eslint-plugin globals @eslint/js typescript-eslint --save-dev`
 
 ### React com Typescript
 
