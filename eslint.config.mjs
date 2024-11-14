@@ -29,7 +29,7 @@ export default [
         singleQuote: false,
         semi: true,
         trailingComma: "es5",
-        endOfLine: "lf",
+        endOfLine: "auto",
         tabWidth: 2
       }], // Aplica as regras do Prettier
     },
